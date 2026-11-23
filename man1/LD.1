@@ -6,7 +6,7 @@ LD \- load English source
 .I program
 .RI [ request ...]
 .SH DESCRIPTION
-LD reads a prose program and asks its runner for one POSIX shell script.
+LD reads a prose program and asks its runner for one Bash or POSIX shell script.
 On success the script appears on standard output. A program can use
 .B #!/bin/LD
 on ix, or
@@ -18,7 +18,7 @@ selects the runner. The default is
 .BR lordhavemercy .
 .SH EXAMPLES
 .nf
-LD NSH > nsh.new && sh -n nsh.new
+LD NSH > nsh.new
 .fi
 .SH SEE ALSO
 .BR lord (1),
