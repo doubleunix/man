@@ -1,0 +1,23 @@
+.TH NSH 1 "November 2026" "ix"
+.SH NAME
+nsh, nhs \- the New Human Shell
+.SH SYNOPSIS
+.B nsh
+.RI [ -c " command"]
+.SH DESCRIPTION
+In a terminal nsh evaluates each line in Bash. A failed line is sent to
+.BR yhwh (1)
+with the status and diagnostics. While a question is pending, the next line
+is an answer. Cancel with Ctrl+C or :cancel.
+.PP
+Prefix a command with
+.B ld.so
+to use its ordinary status without asking. Use
+.B :paste
+and finish with a blank line to enter a block. With redirected input or
+with
+.BR -c ,
+nsh behaves as Bash.
+.SH SEE ALSO
+.BR yhwh (1),
+.BR LD (1)

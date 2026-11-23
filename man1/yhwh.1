@@ -1,0 +1,45 @@
+.TH YHWH 1 "November 2026" "ix"
+.SH NAME
+yhwh \- speak to the fellow who takes credit for the uptime
+.SH SYNOPSIS
+.B yhwh
+.RI [ request ...]
+.br
+.B yhwh shell
+.br
+.B yhwh -c
+.I command
+.br
+.B yhwh save
+.I name file
+.br
+.B yhwh remember
+.I term meaning
+.br
+.B yhwh install
+.I organization/repository
+.SH DESCRIPTION
+With a terminal, yhwh can run up to twenty clarification questions.
+A single turn can be requested with
+.BR "yhwh turn" .
+The explicit
+.B shell
+command opens
+.BR nsh (1).
+.B -c
+passes the command to Bash and preserves its exit status.
+.PP
+.B save
+installs a new executable in the invoking user's bin directory. Root
+installs into /bin. The file must have a shebang. Uppercase names require
+an LD shebang. Use
+.B -
+for standard input.
+.PP
+.B remember
+keeps a one-line definition in etc/yhwh/words under the same prefix.
+.SH SEE ALSO
+.BR @ (1),
+.BR gen (1),
+.BR LD (1),
+.BR nsh (1)

@@ -1,0 +1,45 @@
+.TH GEN 1 "November 2026" "ix"
+.SH NAME
+gen \- ask a generator or fetch and install ports
+.SH SYNOPSIS
+.B gen ask
+.RI [ effort ]
+.br
+.B gen list
+.br
+.B gen fetch
+.RI [ organization/repository ]
+.br
+.B gen install
+.I organization/repository
+.SH DESCRIPTION
+.B ask
+passes standard input to the executable named by
+.B GEN_AGENT
+and relays its standard output. The executable receives
+.B GEN_EFFORT
+in its environment. gen can select a configured HTTP endpoint or a local
+Codex CLI.
+.PP
+Ports are Git repositories. Fetch puts a checkout in
+.BR $HOME/src .
+Install runs the port's Makefile. The default prefix is
+.B /
+for root and
+.B $HOME
+otherwise.
+.SH ENVIRONMENT
+.B GEN_PORTS
+names the ports Makefile.
+.B GIT_ROOT
+selects its Git mirror.
+.B GEN_URL
+and
+.B GEN_MODEL
+configure gen-http.
+.B GEN_KEY
+is its optional bearer token.
+.SH SEE ALSO
+.BR yhwh (1),
+.BR lord (1),
+.BR ix (1)

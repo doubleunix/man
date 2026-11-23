@@ -1,0 +1,17 @@
+.TH IX 1 "November 2026" "ix"
+.SH NAME
+ix \- a small Linux system with a source tree
+.SH DESCRIPTION
+Root, user, and yhwh have UIDs 0, 1, and 2. Each home has a Makefile.
+.B make enterprise
+clones the ports under src.
+.B make -C /
+lists the installed system's entry points.
+.SH EXAMPLES
+.nf
+make -C / install PORT=thedynamiclinker/gen2
+gen2
+.fi
+.SH SEE ALSO
+.BR gen (1),
+.BR yhwh (1)

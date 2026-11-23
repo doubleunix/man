@@ -1,0 +1,25 @@
+.TH LD 1 "November 2026" "ix"
+.SH NAME
+LD \- load English source
+.SH SYNOPSIS
+.B LD
+.I program
+.RI [ request ...]
+.SH DESCRIPTION
+LD reads a prose program and asks its runner for one POSIX shell script.
+On success the script appears on standard output. A program can use
+.B #!/bin/LD
+on ix, or
+.B #!/usr/bin/env LD
+on a system that installs LD in its search path.
+.SH ENVIRONMENT
+.B LD_RUNNER
+selects the runner. The default is
+.BR lordhavemercy .
+.SH EXAMPLES
+.nf
+LD NSH > nsh.new && sh -n nsh.new
+.fi
+.SH SEE ALSO
+.BR lord (1),
+.BR nsh (1)
